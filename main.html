@@ -1,16 +1,238 @@
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards Gallery</title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <style>
+    .gallery-card {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-card .card-body {
+      text-align: center;
+    }
+
+    .lightbox-image {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <div class="container my-4">
+
+    <h2 class="text-center mb-4">Cards Gallery</h2>
+
+    <!-- Single Row -->
+    <div class="row">
+
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image1.jpg"
+            class="card-img-top"
+            alt="Gallery Image 1"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 1</h6>
+            <p class="card-text">Beautiful gallery photo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image2.jpg"
+            class="card-img-top"
+            alt="Gallery Image 2"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 2</h6>
+            <p class="card-text">Amazing gallery collection.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image3.jpg"
+            class="card-img-top"
+            alt="Gallery Image 3"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 3</h6>
+            <p class="card-text">Explore this wonderful picture.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image4.jpg"
+            class="card-img-top"
+            alt="Gallery Image 4"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 4</h6>
+            <p class="card-text">A memorable gallery moment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image5.jpg"
+            class="card-img-top"
+            alt="Gallery Image 5"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 5</h6>
+            <p class="card-text">An inspiring gallery view.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image6.jpg"
+            class="card-img-top"
+            alt="Gallery Image 6"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 6</h6>
+            <p class="card-text">A creative photo collection.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image7.jpg"
+            class="card-img-top"
+            alt="Gallery Image 7"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 7</h6>
+            <p class="card-text">Discover an amazing photo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image8.jpg"
+            class="card-img-top"
+            alt="Gallery Image 8"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 8</h6>
+            <p class="card-text">A stunning visual experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card gallery-card">
+          <img
+            src="https://storage.googleapis.com/acciojob-open-file-collections/image9.jpg"
+            class="card-img-top"
+            alt="Gallery Image 9"
+            onclick="openLightbox(this.src)"
+          >
+          <div class="card-body text-center">
+            <h6 class="card-title">Gallery Image 9</h6>
+            <p class="card-text">Enjoy this beautiful collection.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1"
+       role="dialog" aria-label="Gallery image preview"
+       aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered"
+         role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Image Preview</h5>
+          <button type="button" class="close"
+                  data-dismiss="modal"
+                  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body text-center">
+          <img id="lightboxImage" src=""
+               class="lightbox-image"
+               alt="Enlarged gallery image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function openLightbox(imageSrc) {
+      document.getElementById("lightboxImage").src = imageSrc;
+      $("#lightboxModal").modal("show");
+    }
+  </script>
 
 </body>
-
 </html>
